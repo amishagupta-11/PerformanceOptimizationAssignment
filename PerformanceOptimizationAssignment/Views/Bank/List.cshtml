@@ -1,0 +1,27 @@
+﻿@model IEnumerable<PerformanceOptimizationAssignment.Models.Bank>
+
+
+<h2>Bank List</h2>
+
+<p>Data fetched at: @ViewData["FetchTime"]</p>
+
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>Bank Name</th>
+            <th>Address</th>
+            <th>Branch Code</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bank in Model)
+        {
+            <tr>
+                <td>@bank.BankName</td>
+                <td>@bank.Address</td>
+                <td>@bank.BranchCode</td>                
+            </tr>
+        }
+    </tbody>
+</table>
